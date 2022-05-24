@@ -1,2 +1,7 @@
 out*/
 *.class
+
+.idea
+
+chapter3/helloworld/mods
+chapter3/helloworld/helloworld-image
