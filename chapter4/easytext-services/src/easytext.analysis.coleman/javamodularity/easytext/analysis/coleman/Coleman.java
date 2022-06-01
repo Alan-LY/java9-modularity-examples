@@ -9,6 +9,11 @@ public class Coleman implements Analyzer {
 
    public static final String NAME = "Coleman-Liau";
 
+   public Coleman() {
+      super();
+      System.out.println("Coleman 无参构造器执行了哦...");
+   }
+
    @Override
    public String getName() {
      return NAME;

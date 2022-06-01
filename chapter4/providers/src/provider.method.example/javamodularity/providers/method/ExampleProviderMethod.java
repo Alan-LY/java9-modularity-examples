@@ -22,6 +22,7 @@ public class ExampleProviderMethod implements Analyzer {
   }
 
   public static ExampleProviderMethod provider() {
+    System.out.println("ExampleProviderMethod.provider...");
     return new ExampleProviderMethod("Analyzer created by static method");
   }
 }

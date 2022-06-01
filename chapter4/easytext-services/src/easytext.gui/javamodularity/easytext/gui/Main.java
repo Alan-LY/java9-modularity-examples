@@ -44,9 +44,17 @@ public class Main extends Application {
         Text title = new Text("Choose an algorithm:");
         algorithm = new ComboBox<>();
 
+        System.out.println("ServiceLoader.load start...");
         Iterable<Analyzer> analyzerServices = ServiceLoader.load(Analyzer.class);
+        System.out.println("ServiceLoader.load end.");
 
+        System.out.println("iterator.next " + analyzerServices.iterator().next().getName());
+
+        System.out.println("-----");
+
+        // ServiceLoader 懒加载 只有真正循环进行到某个具体类的时候，才会构造Analyzer
         for(Analyzer analyzer: analyzerServices) {
+          System.out.println("for " + analyzer.getName());
           analyzers.put(analyzer.getName(), analyzer);
           algorithm.getItems().add(analyzer.getName());
         }

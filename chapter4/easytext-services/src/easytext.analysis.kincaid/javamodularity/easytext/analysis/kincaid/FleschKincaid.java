@@ -9,6 +9,11 @@ public class FleschKincaid  implements Analyzer {
 
    public static final String NAME = "Flesch-Kincaid";
 
+   public FleschKincaid() {
+      super();
+      System.out.println("FleschKincaid无参构造器执行...");
+   }
+
    @Override
    public String getName() {
      return NAME;
